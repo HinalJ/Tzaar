@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>hu.unideb.inf</groupId>
+    <artifactId>TzaarGame</artifactId>
+    <version>1.0</version>
+    <description>Tzaar</description>
+
+    <developers>
+        <developer>
+            <id>HinalJ</id>
+            <name>Hinal Jogani</name>
+            <email>hinal@mailbox.unideb.hu</email>
+            <organization>Faculty of Informatics, University of Debrecen</organization>
+            <organizationUrl>https://inf.unideb.hu/</organizationUrl>
+        </developer>
+    </developers>
+
+</project>
