@@ -253,6 +253,36 @@ public class GamePlay {
         return c_players_moves_list;
     }
 
+    public static ArrayList<Move> players_all_moves_list(Board board, String player, boolean first_move){
+        Set<String> c_players_pieces_list;
+        ArrayList<Move> c_players_moves_list = new ArrayList<>();
+
+        if(player.equals("p1"))
+            c_players_pieces_list = board.getPlayer1_piece();
+        else
+            c_players_pieces_list = board.getPlayer2_piece();
+
+        if(!first_move)
+            c_players_moves_list.add(new Move("PASS", "MOVE"));
+
+        for(String piece: c_players_pieces_list){
+            Position pos_piece = board.getBoard().get(piece);
+
+            for(String move: Position.neighbours(pos_piece)) {
+                Position pos_move = board.getBoard().get(move);
+                if(!first_move){
+                    if(pos_piece.getPlayer().equals(pos_move.getPlayer()))
+                        c_players_moves_list.add(new Move(piece, move));
+                }
+                if(!pos_piece.getPlayer().equals(pos_move.getPlayer())){
+                    if(pos_piece.getHeight() >= pos_move.getHeight())
+                        c_players_moves_list.add(new Move(piece, move));
+                }
+            }
+        }
+        return c_players_moves_list;
+    }
+
     public static String isWon(Board board, boolean print){
         Set<String> player1 = new HashSet<>();
         Set<String> player2 = new HashSet<>();
@@ -305,5 +335,9 @@ public class GamePlay {
             }
         }
         return null;
+    }
+
+    public static String next_player(String player){
+        return player.equals("p1") ? "p2" : "p1";
     }
 }
