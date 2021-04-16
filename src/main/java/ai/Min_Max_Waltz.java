@@ -6,7 +6,7 @@ import tzaar.GamePlay.Move;
 
 import java.util.ArrayList;
 
-public class Min_Max_New {
+public class Min_Max_Waltz {
     public static class Result{
         double value = 0;
         Move move = null;

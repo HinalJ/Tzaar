@@ -6,7 +6,7 @@ import tzaar.GamePlay.Move;
 
 import java.util.ArrayList;
 
-public class MinMax {
+public class Min_Max_OurAI {
 
     public static class Result{
         double value = 0;
